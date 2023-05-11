@@ -1,12 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { NavigationContainer } from "@react-navigation/native";
+import {
+  Dimensions,
+  ImageBackground,
+  Keyboard,
+  ScrollView,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
+import { RegistrationScreen } from "./Screens/RegistrationScreen";
+import { LogInScreen } from "./Screens/LoginScreen";
+const MainStack = createStackNavigator();
 export default function App() {
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+        <NavigationContainer>
+          <MainStack.Navigator initialRouteName="Login">
+            {/* <ScrollView style={{flex: 2}}> */}
+            <ImageBackground
+              source={require("./Images/background.jpg")}
+              style={styles.image}
+            >
+              <RegistrationScreen />
+              {/* <LogInScreen /> */}
+            </ImageBackground>
+            {/* </ScrollView> */}
+          </MainStack.Navigator>
+        </NavigationContainer>
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 
