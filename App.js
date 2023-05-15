@@ -1,4 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   Dimensions,
   ImageBackground,
@@ -10,25 +11,27 @@ import {
 } from "react-native";
 import { RegistrationScreen } from "./Screens/RegistrationScreen";
 import { LogInScreen } from "./Screens/LoginScreen";
-const MainStack = createStackNavigator();
+import { RegistrationStyles } from "./Styles/registrationScreenStyles";
+// const MainStack = createNativeStackNavigator();
 export default function App() {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <View style={styles.container}>
-        <NavigationContainer>
-          <MainStack.Navigator initialRouteName="Login">
-            {/* <ScrollView style={{flex: 2}}> */}
-            <ImageBackground
-              source={require("./Images/background.jpg")}
-              style={styles.image}
-            >
-              <RegistrationScreen />
-              {/* <LogInScreen /> */}
-            </ImageBackground>
-            {/* </ScrollView> */}
-          </MainStack.Navigator>
-        </NavigationContainer>
-    </View>
+      <View style={styles.container}>
+      <ImageBackground
+        source={require("./Images/background.jpg")}
+        style={RegistrationStyles.image}
+      >
+          {/* <NavigationContainer> */}
+          {/* <MainStack.Navigator initialRouteName="Login"> */}
+          {/* <ScrollView style={{flex: 2}}> */}
+
+          <RegistrationScreen />
+          {/* <LogInScreen /> */}
+          {/* </ScrollView> */}
+          {/* </MainStack.Navigator> */}
+          {/* </NavigationContainer> */}
+      </ImageBackground>
+        </View>
     </TouchableWithoutFeedback>
   );
 }
@@ -36,8 +39,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });

@@ -7,10 +7,10 @@ export const RegistrationStyles = StyleSheet.create({
     justifyContent: "center",
   },
   inputWrap: {
-    justifyContent: "center",
+    // justifyContent: "center",
     flex: 1,
-
-    overflow: "hidden",
+// backgroundColor: 'tomato',
+    // overflow: "hidden",
    
   },
   input: {
@@ -27,7 +27,9 @@ export const RegistrationStyles = StyleSheet.create({
     lineHeight: 18.75,
   },
   regWrapInput: {
-    flex: 0.5,
+    flex: 0.6,
+    marginBottom: 0,
+    marginTop: 'auto',
     backgroundColor: "#FFFFFF",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,

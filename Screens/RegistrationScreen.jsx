@@ -25,10 +25,10 @@ export const RegistrationScreen = () => {
   };
 
   return (
-    <View style={styles.inputWrap}>
+    // <View style={styles.inputWrap}>
   
-        {/* <View style={{ flex: 2 }} /> */}
-        <View style={{ ...styles.regWrapInput, flex: .6 }}>
+  
+        <View style={styles.regWrapInput}>
           <View style={styles.imageWrap}>
             <TouchableOpacity
               style={{
@@ -58,7 +58,7 @@ export const RegistrationScreen = () => {
             ></Image>
 
           </View>
-          <Text style={styles.headerRegStyle}>Registrati on</Text>
+          <Text style={styles.headerRegStyle}>Registration</Text>
         <KeyboardAvoidingView
           // style={{flex: .5}}
       behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -104,6 +104,6 @@ export const RegistrationScreen = () => {
           </TouchableOpacity>
           <Text style={styles.authLink}>Already Signed up? Login...</Text>
         </View>
-      </View>
+
   );
 };
