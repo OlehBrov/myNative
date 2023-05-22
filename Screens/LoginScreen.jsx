@@ -76,7 +76,7 @@ const LoginStyles = StyleSheet.create({
     // right: 0,
     justifyContent: "flex-end",
     flex: 1,
-    backgroundColor: 'tomato',
+    // backgroundColor: 'tomato',
     // overflow: "hidden",
     marginBottom: 0,
     marginTop: "auto",

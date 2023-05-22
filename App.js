@@ -25,8 +25,8 @@ export default function App() {
           {/* <MainStack.Navigator initialRouteName="Login"> */}
           {/* <ScrollView style={{flex: 2}}> */}
 
-          <RegistrationScreen />
-          {/* <LogInScreen /> */}
+          {/* <RegistrationScreen /> */}
+          <LogInScreen />
           {/* </ScrollView> */}
           {/* </MainStack.Navigator> */}
           {/* </NavigationContainer> */}
