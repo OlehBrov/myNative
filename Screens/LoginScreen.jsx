@@ -70,16 +70,11 @@ export const LogInScreen = () => {
 
 const LoginStyles = StyleSheet.create({
   inputWrap: {
-    // position: "absolute",
-    // bottom: 0,
-    // left: 0,
-    // right: 0,
+
     justifyContent: "flex-end",
     flex: 1,
-    // backgroundColor: 'tomato',
-    // overflow: "hidden",
+
     marginBottom: 0,
-    marginTop: "auto",
-    // paddingBottom: 50,
+  
   },
 });

@@ -1,5 +1,5 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   Dimensions,
   ImageBackground,
@@ -15,31 +15,31 @@ import { RegistrationStyles } from "./Styles/registrationScreenStyles";
 // const MainStack = createNativeStackNavigator();
 export default function App() {
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.container}>
-      <ImageBackground
-        source={require("./Images/background.jpg")}
-        style={RegistrationStyles.image}
-      >
+    <ImageBackground
+      source={require("./Images/background.jpg")}
+      style={RegistrationStyles.image}
+    >
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.container}>
           {/* <NavigationContainer> */}
           {/* <MainStack.Navigator initialRouteName="Login"> */}
           {/* <ScrollView style={{flex: 2}}> */}
 
-          {/* <RegistrationScreen /> */}
-          <LogInScreen />
+          <RegistrationScreen />
+          {/* <LogInScreen /> */}
           {/* </ScrollView> */}
           {/* </MainStack.Navigator> */}
           {/* </NavigationContainer> */}
-      </ImageBackground>
         </View>
-    </TouchableWithoutFeedback>
+      </TouchableWithoutFeedback>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     // alignItems: "center",
     // justifyContent: "center",
   },
